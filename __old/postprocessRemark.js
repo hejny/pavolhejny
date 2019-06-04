@@ -1,7 +1,5 @@
 export function postprocessRemark() {
-    for (const slideContainer of document.querySelectorAll(
-        '.remark-slide-container',
-    )) {
+    for (const slideContainer of document.querySelectorAll('.remark-slide-container')) {
         const slide = slideContainer.querySelector('.remark-slide-content'); //todo rename to slideContent
         const images = Array.from(slide.querySelectorAll('img'));
         const codes = Array.from(slide.querySelectorAll('code'));
@@ -18,10 +16,7 @@ export function postprocessRemark() {
             if (images.length === 1) {
                 const image = images[0];
                 image.onload = () => {
-                    if (
-                        image.width >
-                        400 /*slide.getBoundingClientRect().width*0.5*/
-                    ) {
+                    if (image.width > 400 /*slide.getBoundingClientRect().width*0.5*/) {
                         image.style.display = 'none';
 
                         slide.style.background = `url(${image.src})`;
@@ -94,9 +89,7 @@ function unrender(slide) {
 function renderCodesample(slide) {
     const CODESAMPLE_REGEX = /<p>codesample:([a-z]+):([a-zA-Z0-9\/]+)<\/p>/;
     if (CODESAMPLE_REGEX.test(slide.innerHTML)) {
-        const [full, type, jsfiddleUriPart] = slide.innerHTML.match(
-            CODESAMPLE_REGEX,
-        );
+        const [full, type, jsfiddleUriPart] = slide.innerHTML.match(CODESAMPLE_REGEX);
         //console.log(`Slide is a codesample from "${jsfiddleUriPart}".`);
         slide.innerHTML = `
     <h1>🚀</h1>

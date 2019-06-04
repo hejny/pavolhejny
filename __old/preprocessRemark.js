@@ -9,9 +9,7 @@ export async function preprocessRemark(markdown, path, branding) {
     markdown = (await Promise.all(
         markdown.split('\n').map(async (line) => {
             if (/^\!import.+$/.test(line)) {
-                const lineParsed = /^\!import\s+(([\w\.\/\-])+)(\s+(\-\-(\w+)))*$/gm.exec(
-                    line,
-                );
+                const lineParsed = /^\!import\s+(([\w\.\/\-])+)(\s+(\-\-(\w+)))*$/gm.exec(line);
                 const importFile = lineParsed[1];
                 const importFilePath = `${path}/${importFile}`;
 
@@ -53,9 +51,7 @@ export async function preprocessRemark(markdown, path, branding) {
         slides[0].screen += `
 
 
-![](https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=${encodeURIComponent(
-            normalizedLocation,
-        )})
+![](https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=${encodeURIComponent(normalizedLocation)})
 
 <div class="qr-caption"><a href="https://talks.pavolhejny.com/">talks.pavolhejny.com</a></div>
 <footer>${branding.event}</footer>
@@ -74,9 +70,7 @@ To present press [C] and [P] and [F];
 
 # </🏁Talk is="over">
 
-![](https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=${encodeURIComponent(
-            normalizedLocation,
-        )}})
+![](https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=${encodeURIComponent(normalizedLocation)}})
 
 <div class="qr-caption"><a href="https://talks.pavolhejny.com/">talks.pavolhejny.com</a></div>
 
@@ -85,9 +79,7 @@ To present press [C] and [P] and [F];
 `;
     }
 
-    markdown = slides
-        .map((slide) => `${slide.screen}\n???\n${slide.notes}`)
-        .join('---');
+    markdown = slides.map((slide) => `${slide.screen}\n???\n${slide.notes}`).join('---');
 
     return markdown;
 }

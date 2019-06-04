@@ -24,9 +24,7 @@ export async function main() {
                 },
             );
 
-            document.getElementById(
-                'root',
-            ).innerHTML = `<textarea id="source"></textarea>`;
+            document.getElementById('root').innerHTML = `<textarea id="source"></textarea>`;
             document.getElementById('source').innerHTML = content;
             /*const slideshow = */
             remark.create({
@@ -35,9 +33,7 @@ export async function main() {
 
             postprocessRemark();
 
-            document.title = document.querySelector(
-                '.remark-slide-container h1',
-            ).innerText;
+            document.title = document.querySelector('.remark-slide-container h1').innerText;
 
             return;
         } catch (error) {

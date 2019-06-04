@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "next start",
-    "prettier": "prettier --config .prettierrc --write \"{src,content}/**/*.{js,css,html}\"",
+    "prettier": "prettier --config .prettierrc --write \"{src,components,.vscode}/**/*.{ts,tsx,json}\"",
     "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier",
     "dev": "next",
     "build": "next build",

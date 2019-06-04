@@ -12,9 +12,7 @@ export async function fetchTalksHtml() {
 
     const talksToShow = talks
         .filter((talk) => talk.published)
-        .sort((talk1, talk2) =>
-            valueToDate(talk1.date) < valueToDate(talk2.date) ? 1 : -1,
-        );
+        .sort((talk1, talk2) => (valueToDate(talk1.date) < valueToDate(talk2.date) ? 1 : -1));
 
     console.log('talksToShow', talksToShow);
     console.log(markdown.toHTML(talksToShow[0].description));
@@ -28,9 +26,7 @@ export async function fetchTalksHtml() {
     ${
         !talk.thumbnail
             ? '<div class="thumbnail empty"></div>'
-            : `<div class="thumbnail" style="background: url(${
-                  talk.thumbnail
-              }); background-size: contain;background-repeat: no-repeat;background-position: top center;"></div>`
+            : `<div class="thumbnail" style="background: url(${talk.thumbnail}); background-size: contain;background-repeat: no-repeat;background-position: top center;"></div>`
     }
 
     <div class="info">
@@ -42,17 +38,9 @@ export async function fetchTalksHtml() {
                 .join(' | ')}
         </h2>
 
-        ${
-            !talk.description
-                ? ''
-                : `<p class="description">${markdown.toHTML(
-                      talk.description,
-                  )}</p>`
-        }
+        ${!talk.description ? '' : `<p class="description">${markdown.toHTML(talk.description)}</p>`}
 
-        <a href="${
-            talk.presentationURL
-        }" target="_blank"><button>Prezentace</button></a>
+        <a href="${talk.presentationURL}" target="_blank"><button>Prezentace</button></a>
 
     </div>
 
