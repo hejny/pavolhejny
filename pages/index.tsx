@@ -1,11 +1,11 @@
-import * as React from 'react'
-import Link from 'next/link'
-import Layout from '../components/Layout'
-import { NextPage } from 'next'
+import { NextPage } from 'next';
+import Link from 'next/link';
+import * as React from 'react';
+import Layout from '../components/Layout';
 
 const IndexPage: NextPage = () => {
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
+    <Layout title="Talks | Pavol Hejný">
       <h1>Hello Next.js 👋</h1>
       <p>
         <Link href="/about">
