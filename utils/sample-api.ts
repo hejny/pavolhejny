@@ -1,11 +1,9 @@
-import { User } from '../interfaces'
+import { Talk } from '../model/Talk';
 
 /** Dummy user data. */
-export const dataArray: User[] = [
-  { id: 101, name: 'Alice' },
-  { id: 102, name: 'Bob' },
-  { id: 103, name: 'Caroline' },
-  { id: 104, name: 'Dave' },
+export const dataArray: Talk[] = [
+  new Talk({id: 1}),
+  new Talk({id: 1}),
 ]
 
 /**

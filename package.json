@@ -6,8 +6,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "next start",
-    "prettier": "prettier --config .prettierrc --write \"{src,components,.vscode}/**/*.{ts,tsx,json}\"",
+    "start": "next",
+    "prettier": "prettier --config .prettierrc --write \"{src,pages,model,components,.vscode}/**/*.{ts,tsx,json}\"",
     "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier",
     "dev": "next",
     "build": "next build",
