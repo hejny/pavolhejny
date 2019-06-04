@@ -1,3 +1,5 @@
+//import fetch from 'unfetch';
+import fetch from 'isomorphic-unfetch';
 import { Talk } from '../model/Talk';
 
 /** Dummy user data. */
@@ -14,6 +16,13 @@ export async function findData(id: number | string) {
     if (!selected) {
         throw new Error('Cannot find user');
     }
+
+    const response = await fetch(
+        `https://docs.google.com/spreadsheets/d/e/2PACX-1vRILhqlYdHZYOHa8_5awq6Z5bo4Sfhr2eFMjeQ7qwqDLbfR4gt44PqjfHKApmjgNbPjbc8FlStKhKiP/pub?gid=0&single=true&output=csv`,
+    );
+    const data = await response.text();
+
+    selected.description = data;
 
     return selected;
 }

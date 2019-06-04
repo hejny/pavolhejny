@@ -20,6 +20,7 @@
   "license": "ISC",
   "homepage": "https://talks.pavolhejny.com",
   "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
     "next": "8.1.1-canary.43",
     "react": "16.8.6",
     "react-dom": "16.8.6"
