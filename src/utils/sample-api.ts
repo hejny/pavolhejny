@@ -1,5 +1,6 @@
 //import fetch from 'unfetch';
 import fetch from 'isomorphic-unfetch';
+import papaparse from 'papaparse';
 import { Talk } from '../model/Talk';
 
 /** Dummy user data. */
@@ -20,9 +21,12 @@ export async function findData(id: number | string) {
     const response = await fetch(
         `https://docs.google.com/spreadsheets/d/e/2PACX-1vRILhqlYdHZYOHa8_5awq6Z5bo4Sfhr2eFMjeQ7qwqDLbfR4gt44PqjfHKApmjgNbPjbc8FlStKhKiP/pub?gid=0&single=true&output=csv`,
     );
-    const data = await response.text();
+    const dataString = await response.text();
+    const { data } = papaparse.parse(dataString,{
+        header: true
+    });
 
-    selected.description = data;
+    selected.description = JSON.stringify(data);
 
     return selected;
 }
