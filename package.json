@@ -6,12 +6,11 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "next",
-    "prettier": "prettier --config .prettierrc --write \"{src,pages,model,components,.vscode}/**/*.{ts,tsx,json}\"",
+    "start": "next ./src",
+    "prettier": "prettier --config .prettierrc --write \"{src,.vscode}/**/*.{ts,tsx,json}\"",
     "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier",
-    "dev": "next",
-    "build": "next build",
-    "type-check": "tsc"
+    "dev": "next ./src",
+    "build": "next build ./src"
   },
   "repository": {
     "type": "git",

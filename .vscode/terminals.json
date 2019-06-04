@@ -3,20 +3,12 @@
     "autokill": true,
     "terminals": [
         {
-            "name": "frontend",
-            "command": "npm run frontend"
-        },
-        {
-            "name": "server",
-            "command": "npm run server-watch"
+            "name": "start",
+            "command": "npm start"
         },
         {
             "name": "prettier-watch",
             "command": "npm run prettier-watch"
-        },
-        {
-            "name": "server-test-watch",
-            "command": "npm run server-test-watch"
         }
     ]
 }
