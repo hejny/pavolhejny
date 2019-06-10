@@ -1,5 +1,4 @@
-import { ConfigChecker, IConfigSource } from "../utils/ConfigChecker";
-
+import { ConfigChecker, IConfigSource } from 'configchecker';
 export class Talk {
 
 
