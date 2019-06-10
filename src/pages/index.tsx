@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Layout } from '../components/Layout';
 import { TalkComponent } from '../components/TalkComponent';
 import { Talk } from '../model/Talk';
-import { findData } from '../utils/sample-api';
+import { fetchTalks } from '../utils/fetchTalks';
 
 interface IndexPageProps {
     error?: string;
@@ -14,8 +14,8 @@ interface IndexPageState {}
 export class IndexPage extends React.Component<IndexPageProps, IndexPageState> {
     static getInitialProps = async ({ query }: NextPageContext) => {
         try {
-            const { id } = query;
-            const talk = await findData(Array.isArray(id) ? id[0] : id);
+            //const { id } = query;
+            const talk = await fetchTalks();
             return { talk };
         } catch (error) {
             return { error: error.message };

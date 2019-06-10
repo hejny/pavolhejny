@@ -11,7 +11,7 @@ export function TalkComponent(props: ITalkComponentProps) {
     } = props;
     return (
         <div className="talk">
-            <div className="thumbnail empty"></div>
+            <div className="thumbnail empty" />
 
             <div className="info">
                 <h1 className="name">Testování v praxi {id}</h1>
