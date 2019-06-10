@@ -7,14 +7,14 @@ type ITalkComponentProps = {
 
 export function TalkComponent(props: ITalkComponentProps) {
     const {
-        talk: { id, description },
+        talk: {  name, description },
     } = props;
     return (
         <div className="talk">
             <div className="thumbnail empty" />
 
             <div className="info">
-                <h1 className="name">Testování v praxi {id}</h1>
+                <h1 className="name"> {name}</h1>
                 <h2>
                     <span>2019</span> | <span>Digisemestr</span>
                 </h2>

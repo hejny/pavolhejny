@@ -7,7 +7,7 @@ import { fetchTalks } from '../utils/fetchTalks';
 
 interface IndexPageProps {
     error?: string;
-    talk: Talk;
+    talks: Talk[];
 }
 
 interface IndexPageState {}
@@ -15,23 +15,26 @@ export class IndexPage extends React.Component<IndexPageProps, IndexPageState> {
     static getInitialProps = async ({ query }: NextPageContext) => {
         try {
             //const { id } = query;
-            const talk = await fetchTalks();
-            return { talk };
+            const talks = await fetchTalks();
+            return { talks };
         } catch (error) {
             return { error: error.message };
         }
     };
 
     render() {
-        const { error, talk } = this.props;
+        const { error, talks } = this.props;
 
         if (error) {
-            return <Layout title="Not found">{error}</Layout>;
+            return <Layout title="Not found">{error.split('\n').map(line=>(<span>{line}<br/></span>))}</Layout>;
         }
 
         return (
             <Layout title="Talks">
-                <TalkComponent {...{ talk }} />
+                {talks.map((talk,i)=>(
+                    <TalkComponent key={i} {...{ talk }} />
+                ))}
+                
             </Layout>
         );
     }

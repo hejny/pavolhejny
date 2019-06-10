@@ -1,9 +1,10 @@
 //import fetch from 'unfetch';
 import fetch from 'isomorphic-unfetch';
 import papaparse from 'papaparse';
-import { Talk } from '../model/Talk';
 import { TALKS_CSV_URL } from '../config';
-import { decapitalize } from './object';
+import { Talk } from '../model/Talk';
+import { IConfigSource } from './ConfigChecker';
+import { decapitalize, emptyKeysAsUndefined, isNotEmpty } from './object';
 
 export async function fetchTalks(): Promise<Talk[]> {
     const response = await fetch(TALKS_CSV_URL);
@@ -12,5 +13,9 @@ export async function fetchTalks(): Promise<Talk[]> {
         header: true,
     });
 
-    return data.map((t) => new Talk(decapitalize(t)));
+    return (data as IConfigSource[]).map(emptyKeysAsUndefined).filter(isNotEmpty).map(decapitalize).map((t) => new Talk(t));
+
+
+
+
 }
