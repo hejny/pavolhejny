@@ -13,9 +13,9 @@ export async function fetchTalks(): Promise<Talk[]> {
         header: true,
     });
 
-    return (data as IConfigSource[]).map(emptyKeysAsUndefined).filter(isNotEmpty).map(decapitalize).map((t) => new Talk(t));
-
-
-
-
+    return (data as IConfigSource[])
+        .map(emptyKeysAsUndefined)
+        .filter(isNotEmpty)
+        .map(decapitalize)
+        .map((t) => new Talk(t));
 }

@@ -26,15 +26,23 @@ export class IndexPage extends React.Component<IndexPageProps, IndexPageState> {
         const { error, talks } = this.props;
 
         if (error) {
-            return <Layout title="Not found">{error.split('\n').map(line=>(<span>{line}<br/></span>))}</Layout>;
+            return (
+                <Layout title="Not found">
+                    {error.split('\n').map((line) => (
+                        <span>
+                            {line}
+                            <br />
+                        </span>
+                    ))}
+                </Layout>
+            );
         }
 
         return (
             <Layout title="Talks">
-                {talks.map((talk,i)=>(
+                {talks.map((talk, i) => (
                     <TalkComponent key={i} {...{ talk }} />
                 ))}
-                
             </Layout>
         );
     }

@@ -1,7 +1,5 @@
 import { ConfigChecker, IConfigSource } from 'configchecker';
 export class Talk {
-
-
     //TODO: readonly id: number;
     name: string;
     description?: string;
@@ -20,14 +18,19 @@ export class Talk {
     articleURL?: URL;
 
     constructor(data: IConfigSource) {
-
         console.log(data);
         const c = ConfigChecker.from(data);
 
         this.name = c.get('name').required().value;
         this.description = c.get('description').value;
-        this.published = c.get('published').boolean().required().value;
-        this.date = c.get('date').date().required().value;
+        this.published = c
+            .get('published')
+            .boolean()
+            .required().value;
+        this.date = c
+            .get('date')
+            .date()
+            .required().value;
         this.event = c.get('event').required().value;
         this.city = c.get('city').required().value;
         this.duration = c.get('duration').required().value;
@@ -39,6 +42,5 @@ export class Talk {
         this.videoURL = c.get('videoURL').url().value;
         this.audioURL = c.get('audioURL').url().value;
         this.articleURL = c.get('articleURL').url().value;
-
     }
 }

@@ -7,7 +7,7 @@ type ITalkComponentProps = {
 
 export function TalkComponent(props: ITalkComponentProps) {
     const {
-        talk: {  name, description },
+        talk: { name, description },
     } = props;
     return (
         <div className="talk">
