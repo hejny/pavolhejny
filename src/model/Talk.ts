@@ -4,7 +4,7 @@ export class Talk {
     name: string;
     description?: string;
     published: boolean;
-    date: Date;
+    date?: Date;
     event?: string;
     city?: string;
     duration?: string;
@@ -30,10 +30,11 @@ export class Talk {
         this.date = c
             .get('date')
             .date()
-            .required().value;
-        this.event = c.get('event').required().value;
-        this.city = c.get('city').required().value;
-        this.duration = c.get('duration').required().value;
+            //.required()
+            .value;
+        this.event = c.get('event').value;
+        this.city = c.get('city').value;
+        this.duration = c.get('duration').value;
         this.presentationURL = c.get('presentationURL').url().value;
         this.thumbnail = c.get('thumbnail').url().value;
         this.presentationStaticURL = c.get('presentationStaticURL').url().value;
