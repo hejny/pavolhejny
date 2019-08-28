@@ -4,7 +4,7 @@ import { Layout } from '../components/Layout';
 import { TalksComponent } from '../components/TalksComponent';
 import { Talk } from '../model/Talk';
 import { fetchTalks } from '../utils/fetchTalks';
-import { compareDates, compareTalksbyDate } from '../utils/compareDates';
+import { compareTalksbyDate } from '../utils/compareDates';
 
 interface IndexPageProps {
     error?: string;

@@ -4,6 +4,7 @@ export class Talk {
     name: string;
     description?: string;
     published: boolean;
+    language: string;
     date: Date;
     event?: string;
     city?: string;
@@ -22,6 +23,7 @@ export class Talk {
             .get('published')
             .boolean()
             .required().value;
+        this.language = c.get('language').required().value;
         this.date =
             //.required()
             //.required() /*TODO: To configchecker default should mean also required*/

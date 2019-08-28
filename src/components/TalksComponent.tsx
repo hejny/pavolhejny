@@ -16,6 +16,7 @@ export function TalksComponent(props: ITalksComponentProps) {
                     <th>Date</th>
                     <th>Event</th>
                     <th>City</th>
+                    <th>Language</th>
                     <th>Links</th>
                 </tr>
             </thead>
@@ -26,6 +27,7 @@ export function TalksComponent(props: ITalksComponentProps) {
                         <td>{moment(talk.date).format(`MMMM YYYY`)}</td>
                         <td>{talk.eventURL ? <a href={talk.eventURL.toString()}>{talk.event}</a> : talk.event}</td>
                         <td>{talk.city}</td>
+                        <td>{({ cs: 'Czech', sk: 'Slovak', en: 'english' } as any)[talk.language]}</td>
                         <td>
                             {talk.presentationURL && <a href={talk.presentationURL.toString()}>Presentation</a>}
                             {talk.videoURL && <a href={talk.videoURL.toString()}>Video</a>}
