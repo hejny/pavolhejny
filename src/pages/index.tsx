@@ -1,9 +1,10 @@
 import { NextPageContext } from 'next';
 import * as React from 'react';
 import { Layout } from '../components/Layout';
-import { TalkComponent } from '../components/TalkComponent';
+import { TalksComponent } from '../components/TalksComponent';
 import { Talk } from '../model/Talk';
 import { fetchTalks } from '../utils/fetchTalks';
+import { compareDates, compareTalksbyDate } from '../utils/compareDates';
 
 interface IndexPageProps {
     error?: string;
@@ -16,6 +17,7 @@ export class IndexPage extends React.Component<IndexPageProps, IndexPageState> {
         try {
             //const { id } = query;
             const talks = await fetchTalks();
+            //console.log(talks);
             return { talks };
         } catch (error) {
             return { error: error.message };
@@ -40,9 +42,14 @@ export class IndexPage extends React.Component<IndexPageProps, IndexPageState> {
 
         return (
             <Layout title="Talks">
-                {talks.map((talk, i) => (
-                    <TalkComponent key={i} {...{ talk }} />
-                ))}
+                <h2>Upcomming</h2>
+                <TalksComponent
+                    {...{ talks: talks.filter((talk) => compareTalksbyDate(talk) === -1).sort(compareTalksbyDate) }}
+                />
+                <h2>Past</h2>
+                <TalksComponent
+                    {...{ talks: talks.filter((talk) => compareTalksbyDate(talk) === 1).sort(compareTalksbyDate) }}
+                />
             </Layout>
         );
     }
