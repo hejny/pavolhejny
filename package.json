@@ -22,22 +22,19 @@
   "license": "ISC",
   "homepage": "https://talks.pavolhejny.com",
   "dependencies": {
+    "@types/node": "^11.13.9",
     "@types/papaparse": "^4.5.9",
+    "@types/react": "^16.8.15",
+    "@types/react-dom": "^16.0.11",
     "configchecker": "^0.4.1",
     "isomorphic-unfetch": "^3.0.0",
     "moment": "^2.24.0",
     "next": "8.1.1-canary.43",
-    "papaparse": "^5.0.0",
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
-  },
-  "devDependencies": {
-    "@prettier/plugin-php": "github:prettier/plugin-php",
-    "concurrently": "^4.1.0",
     "onchange": "^3.3.0",
+    "papaparse": "^5.0.0",
     "prettier": "github:prettier/prettier",
-    "@types/node": "^11.13.9",
-    "@types/react": "^16.8.15",
-    "@types/react-dom": "^16.0.11"
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "typescript": "^3.6.2"
   }
 }
