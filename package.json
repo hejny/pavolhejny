@@ -1,15 +1,17 @@
 {
   "name": "talks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Presentations for my (me@pavolhejny.com) talks on conferences and meetups.",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "start": "concurrently \"npm run prettier-watch\" \"lando start\"",
-    "stop": "lando stop",
-    "prettier": "prettier --config .prettierrc --write \"{src,content}/**/*.{js,css,html}\"",
-    "prettier-watch": "onchange \"**/*\" -- npm run prettier"
+    "clear": "rm -r src/.next",
+    "start": "next ./src",
+    "prettier": "prettier --config .prettierrc --write \"{src,.vscode}/**/*.{ts,tsx,json}\"",
+    "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier",
+    "dev": "next ./src",
+    "build": "next build ./src"
   },
   "repository": {
     "type": "git",
@@ -18,10 +20,23 @@
   "author": "Pavol Hejný",
   "license": "ISC",
   "homepage": "https://talks.pavolhejny.com",
+  "dependencies": {
+    "@types/papaparse": "^4.5.9",
+    "configchecker": "^0.4.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "moment": "^2.24.0",
+    "next": "8.1.1-canary.43",
+    "papaparse": "^5.0.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
   "devDependencies": {
     "@prettier/plugin-php": "github:prettier/plugin-php",
     "concurrently": "^4.1.0",
     "onchange": "^3.3.0",
-    "prettier": "github:prettier/prettier"
+    "prettier": "github:prettier/prettier",
+    "@types/node": "^11.13.9",
+    "@types/react": "^16.8.15",
+    "@types/react-dom": "^16.0.11"
   }
 }
