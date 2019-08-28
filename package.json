@@ -11,7 +11,8 @@
     "prettier": "prettier --config .prettierrc --write \"{src,.vscode}/**/*.{ts,tsx,json}\"",
     "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier",
     "dev": "next ./src",
-    "build": "next build ./src"
+    "build": "next build ./src",
+    "deploy": " git push heroku master"
   },
   "repository": {
     "type": "git",
