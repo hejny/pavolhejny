@@ -7,7 +7,7 @@
   },
   "scripts": {
     "clear": "rm -r src/.next",
-    "start": "next ./src",
+    "start": "next ./src -p $PORT",
     "prettier": "prettier --config .prettierrc --write \"{src,.vscode}/**/*.{ts,tsx,json}\"",
     "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier",
     "dev": "next ./src",

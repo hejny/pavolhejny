@@ -11,6 +11,7 @@ export const Layout: React.FunctionComponent<Props> = ({ children, title }) => (
             <title>{`${title} | Pavol Hejný`}</title>
             <meta charSet="utf-8" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <link rel="shortcut icon" href="https://1.gravatar.com/avatar/3d98c15957c5f5dd227e53dbc7cbb60d?s=64&amp;r=pg&amp;d=mm ?&gt;" />
         </Head>
         <header>
             <h1>
