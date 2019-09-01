@@ -6,12 +6,12 @@
     "lib": "lib"
   },
   "scripts": {
-    "clear": "rm -r src/.next",
-    "start": "next ./src -p $PORT",
+    "start": "npm run clear && open-cli http://localhost:3000/ && next ./src -p $PORT",
     "prettier": "prettier --config .prettierrc --write \"{src,.vscode}/**/*.{ts,tsx,json}\"",
     "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier",
-    "dev": "next ./src",
-    "build": "next build ./src",
+    "clear": "rm -r -f ./src/.next",
+    "build": "npm run clear && next build ./src",
+    "export": "npm run build && next export ./src",
     "deploy": " git push heroku master"
   },
   "repository": {
@@ -31,6 +31,7 @@
     "moment": "^2.24.0",
     "next": "8.1.1-canary.43",
     "onchange": "^3.3.0",
+    "open-cli": "^5.0.0",
     "papaparse": "^5.0.0",
     "prettier": "github:prettier/prettier",
     "react": "16.8.6",
