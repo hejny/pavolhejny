@@ -7,8 +7,7 @@ node_modules
 
 
 #build
-src/.next
-src/out
+dist
 
 # IDEs
 .idea

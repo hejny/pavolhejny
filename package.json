@@ -7,11 +7,11 @@
   },
   "scripts": {
     "start": "npm run clear && open-cli http://localhost:3000/ && next ./src -p $PORT",
-    "prettier": "prettier --config .prettierrc --write \"{src,.vscode}/**/*.{ts,tsx,json}\"",
-    "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier",
-    "clear": "rm -r -f ./src/.next",
+    "prettier-watch": "onchange \"./src/**/*.(ts|tsx|css|json|js)\" -- prettier --config .prettierrc --write \"{{changed}}\"",
+    "clear": "",
+    "old-clear": "rm -r -f ./src/.next",
     "build": "npm run clear && next build ./src",
-    "export": "npm run build && next export ./src",
+    "export": "npm run build && next export -o ./dist/export ./src",
     "deploy": " git push heroku master"
   },
   "repository": {

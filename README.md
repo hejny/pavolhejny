@@ -1,3 +1,3 @@
-# Talks
+# Pavol Hejný
 
-Presentations for [my](pavolhejny.com) talks on conferences and meetups.
+This is personal website of Pavol Hejný.
