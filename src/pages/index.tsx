@@ -11,7 +11,7 @@ export default function IndexPage() {
                     <div className="inner">
                         <a className="avatar">
                             <img
-                                src="https://1.gravatar.com/avatar/3d98c15957c5f5dd227e53dbc7cbb60d?s=300&amp;r=pg&amp;d=mm"
+                                src="https://1.gravatar.com/avatar/3d98c15957c5f5dd227e53dbc7cbb60d?s=300&r=pg&d=mm"
                                 alt="Pavol Hejný"
                             />
                         </a>
@@ -46,7 +46,7 @@ export default function IndexPage() {
                                 touch!
                             </p>
                             <form
-                                action="https://pavolhejny.us18.list-manage.com/subscribe/post?u=d71ea5d2703abed51cb32d0c7&amp;id=d6fc10835b"
+                                action="https://pavolhejny.us18.list-manage.com/subscribe/post?u=d71ea5d2703abed51cb32d0c7&id=d6fc10835b"
                                 method="post"
                                 name="mc-embedded-subscribe-form"
                                 target="_blank"
