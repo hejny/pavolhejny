@@ -70,10 +70,8 @@ export const Layout: React.FunctionComponent<Props> = ({ children, title }) => (
                 })}
             </script>
         </Head>
-
         {children}
-
-        <style jsx>
+        <style jsx global>
             {`
                 body {
                     font-family: roboto condensed, sans-serif;
