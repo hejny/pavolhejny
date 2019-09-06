@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "npm run clear && open-cli http://localhost:3000/ && next ./src -p $PORT",
-    "prettier": "prettier --config .prettierrc --write \"./src/**/*.(ts|tsx|css|json|js)\"",
+    "prettier": "prettier --config .prettierrc --write \"./src/**/*.{ts,tsx,css,json,js}\"",
     "prettier-watch": "onchange \"./src/**/*.(ts|tsx|css|json|js)\" -- prettier --config .prettierrc --write \"{{changed}}\"",
     "prettier-commit": "git diff --exit-code && npm run prettier && git add src && git commit --allow-empty -m \"Prettier\"",
     "clear": "",
