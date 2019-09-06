@@ -184,7 +184,7 @@ export default function IndexPage() {
                     font-size: 1.1rem;
                 }
 
-                .vcard .inner .about a{
+                .vcard .inner .about a {
                     margin-left: 0.2em;
                     margin-right: 0.2em;
                     border-bottom: 2px solid rgba(255, 237, 203, 0.5);
