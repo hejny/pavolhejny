@@ -1,32 +1,37 @@
 {
   "name": "talks",
   "version": "0.1.1",
-  "description": "Presentations for my (me@pavolhejny.com) talks on conferences and meetups.",
+  "description": "My (me@pavolhejny.com) personal page.",
+  "homepage": "https://www.pavolhejny.com/",
+  "author": "Pavol Hejný",
+  "license": "ISC",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "start": "npm run clear && open-cli http://localhost:3000/ && next ./src -p $PORT",
+    "prettier": "prettier --config .prettierrc --write \"./src/**/*.(ts|tsx|css|json|js)\"",
     "prettier-watch": "onchange \"./src/**/*.(ts|tsx|css|json|js)\" -- prettier --config .prettierrc --write \"{{changed}}\"",
+    "prettier-commit": "git diff --exit-code && npm run prettier && git add src && git commit --allow-empty -m \"Prettier\"",
     "clear": "",
-    "old-clear": "rm -r -f ./src/.next",
+    "old-TODO-remove-and-purge-clear": "rm -r -f ./src/.next",
     "build": "npm run clear && next build ./src",
-    "export": "npm run build && next export -o ./dist/export ./src",
-    "deploy": " git push heroku master"
+    "export": " next export -o ./dist/export ./src",
+    "deploy": "gh-pages -d dist/export",
+    "preversion": "npm run prettier-commit && npm run build && npm run export",
+    "postversion": "git push && git push --tags && npm run deploy"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:hejny/talks.git"
   },
-  "author": "Pavol Hejný",
-  "license": "ISC",
-  "homepage": "https://talks.pavolhejny.com",
   "dependencies": {
     "@types/node": "^11.13.9",
     "@types/papaparse": "^4.5.9",
     "@types/react": "^16.8.15",
     "@types/react-dom": "^16.0.11",
     "configchecker": "^0.4.1",
+    "gh-pages": "^2.1.1",
     "isomorphic-unfetch": "^3.0.0",
     "moment": "^2.24.0",
     "next": "8.1.1-canary.43",
