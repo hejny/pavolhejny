@@ -40,6 +40,8 @@ export default function IndexPage() {
                                 <a href="https://www.birdlife.cz/">Czech Society for Ornithology</a>
                                 where I was creating apps for citizen science.
                             </p>
+
+                            {/*
                             <p>
                                 If you don't want to miss an interesting
                                 event&nbsp;/&nbsp;conference&nbsp;/&nbsp;hackathon write me your email and stay in
@@ -54,6 +56,7 @@ export default function IndexPage() {
                                 <input id="newsletter" type="email" defaultValue="@" name="EMAIL" />
                                 <input type="submit" defaultValue="Subscribe" name="subscribe" />
                             </form>
+                            */}
                         </div>
                         <div className="contacts">
                             <a href="mailto: me@pavolhejny.com" target="_blank" title="Email">
@@ -170,15 +173,21 @@ export default function IndexPage() {
                 }
 
                 .vcard .inner .contacts a {
-                    display: inline-block;
+                    /*border: 1px solid red;*/
                     font-size: 27px;
                     text-decoration: none;
                     margin: 8px;
                 }
 
                 .vcard .inner .about {
-                    text-align: justify;
-                    font-size: 1.2rem;
+                    text-align: left;
+                    font-size: 1.1rem;
+                }
+
+                .vcard .inner .about a{
+                    margin-left: 0.2em;
+                    margin-right: 0.2em;
+                    border-bottom: 2px solid rgba(255, 237, 203, 0.5);
                 }
 
                 @media only screen and (max-width: 1000px) {
