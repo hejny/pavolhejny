@@ -2,11 +2,11 @@ import Head from 'next/head';
 import * as React from 'react';
 import { PAGE_TITLE } from '../config';
 
-type Props = {
+interface ILayoutProps {
     title?: string;
-};
+}
 
-export const Layout: React.FunctionComponent<Props> = ({ children, title }) => (
+export const Layout: React.FunctionComponent<ILayoutProps> = ({ children, title }) => (
     <>
         <Head>
             <title>{title ? `${title} | ${PAGE_TITLE}` : PAGE_TITLE}</title>
@@ -79,41 +79,15 @@ export const Layout: React.FunctionComponent<Props> = ({ children, title }) => (
         <style jsx global>
             {`
                 body {
-                    font-family: roboto condensed, sans-serif;
-                    text-align: center;
+                    font-family: oswald;
                     padding: 0;
                     margin: 0;
-                    min-height: 100vh;
-                    background: url(./static/background.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-color: #000;
                 }
 
                 * {
                     transition: all 0.2s ease-out;
                 }
-
-                a {
-                    text-decoration: underline;
-                    color: rgba(255, 255, 255, 0.397);
-                    outline: 0;
-                }
-
-                a:hover {
-                    color: #fff;
-                }
             `}
         </style>
-
-        {/*
-        <header>
-            <h1>
-                <a href="https://www.pavolhejny.com">Pavol Hejný</a> talks
-            </h1>
-        </header>
-        <main></main>
-        <footer>Made by Pavol Hejný</footer>
-        */}
     </>
 );

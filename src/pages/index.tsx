@@ -1,23 +1,32 @@
 import { NextPageContext } from 'next';
 import * as React from 'react';
 import { Layout } from '../components/Layout';
-//import '../style/index.css';
+import { Card } from '../components/Card';
+import { Column } from '../components/Column';
 
 export default () => (
     <Layout>
-        <div className="card">
+        {/*
+        <Card uri="/" title="Pavol Hejný" className="about">
             <h1>Pavol Hejný</h1>
-        </div>
+        </Card>
+        */}
+        <Card uri="/programator" title="Vyvíjím">
+            <Column>
+                <h2>Vyvíjím</h2>
+                Různé aplikace. Pracoval jsem např. na
+            </Column>
+            <Column>
+                <h2>Projekty</h2>
+            </Column>
+        </Card>
 
-        <div className="card">
-            <h2>Vyvíjím</h2>
-        </div>
+        <Card uri="/hacker" title="Prototipuju"></Card>
 
-        <style jsx>{`
-            .card {
-                background-color: #997777;
-                height: 80vh;
-            }
-        `}</style>
+        <Card uri="/organizator" title="Organizuju akce"></Card>
+
+        <Card uri="/talks" title="Mluvím"></Card>
+
+        <Card uri="/kontakt" title="Kontakt"></Card>
     </Layout>
 );
