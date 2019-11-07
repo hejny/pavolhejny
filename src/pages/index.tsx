@@ -12,7 +12,7 @@ export default () => (
         </Card>
         */}
         <Card uri="/programator" title="Vyvíjím">
-            <Column>
+            <Column columns={'aaaa'}>
                 <h2>Vyvíjím</h2>
                 Různé aplikace. Pracoval jsem např. na
             </Column>
@@ -26,6 +26,8 @@ export default () => (
         <Card uri="/organizator" title="Organizuju akce"></Card>
 
         <Card uri="/talks" title="Mluvím"></Card>
+
+        <Card uri="/talks" title="Znám Prahu"></Card>
 
         <Card uri="/kontakt" title="Kontakt"></Card>
     </Layout>
