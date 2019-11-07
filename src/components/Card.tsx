@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ICardDesign } from '../config/interfaces';
 import { CARD_DESIGNS } from '../config/config';
+import { cardDesignToStyle } from '../config/cardDesignToStyle';
 
 interface ICardProps {
     uri: string;
@@ -17,13 +18,7 @@ export function Card(props: ICardProps) {
 
     return (
         <>
-            <div
-                className={['card', className].filter((x) => x).join(' ')}
-                style={{
-                    color: cardDesign.textColor,
-                    backgroundColor: cardDesign.backgroundColor,
-                }}
-            >
+            <div className={['card', className].filter((x) => x).join(' ')} style={cardDesignToStyle(cardDesign)}>
                 <h1>{title}</h1>
                 {children}
             </div>
@@ -38,12 +33,14 @@ export function Card(props: ICardProps) {
                         padding: 30px;
                     }
 
+                    /*
                     .about {
                         background: url('./static/background.jpg');
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-color: #000;
                     }
+                    */
                 `}
             </style>
         </>

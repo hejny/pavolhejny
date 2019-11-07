@@ -2,8 +2,10 @@ import { Color } from "./config";
 
 
 export interface ICardDesign {
-    backgroundColor: Color;
     textColor: Color;
+    backgroundColor: Color;
+    backgroundImage?: string;
+   
 }
 
 

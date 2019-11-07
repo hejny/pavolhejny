@@ -10,12 +10,17 @@ export enum Color {
 }
 
 export const CARD_DESIGNS: ICardDesigns = {
+    ABOUT: {
+        textColor: Color.BLACK,
+        backgroundColor: Color.YELLOW,
+        backgroundImage: './static/background.jpg',
+    },
     BLACK: {
-        backgroundColor: Color.BLACK,
         textColor: Color.YELLOW,
+        backgroundColor: Color.BLACK,
     },
     WHITE: {
-        backgroundColor: Color.YELLOW,
         textColor: Color.BLACK,
+        backgroundColor: Color.YELLOW,
     },
 };

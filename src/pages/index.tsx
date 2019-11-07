@@ -12,7 +12,7 @@ export default () => (
             <h1>Pavol Hejný</h1>
         </Card>
         */}
-        <Card cardDesign={CARD_DESIGNS.WHITE} uri="/programator" title="Vyvíjím">
+        <Card cardDesign={CARD_DESIGNS.ABOUT} uri="/programator" title="Vyvíjím">
             <Column>
                 <h2>Vyvíjím</h2>
                 Různé aplikace . Pracoval jsem např. na
