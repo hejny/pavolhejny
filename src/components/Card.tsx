@@ -1,26 +1,41 @@
 import * as React from 'react';
+import { ICardDesign } from '../config/interfaces';
+import { CARD_DESIGNS } from '../config/config';
 
 interface ICardProps {
     uri: string;
     title: string;
     children?: React.ReactNode;
     className?: string;
+    cardDesign: ICardDesign;
 }
 
 export function Card(props: ICardProps) {
-    const { children, title, className } = props;
+    const { children, title, className, cardDesign } = props;
+
+    //cardDesign = cardDesign || CARD_DESIGNS.WHITE;
+
     return (
         <>
-            <div className={['card', className].filter((x) => x).join(' ')}>
-                {/*<h1>{title}</h1>*/}
+            <div
+                className={['card', className].filter((x) => x).join(' ')}
+                style={{
+                    color: cardDesign.textColor,
+                    backgroundColor: cardDesign.backgroundColor,
+                }}
+            >
+                <h1>{title}</h1>
                 {children}
             </div>
 
             <style jsx>
                 {`
                     .card {
-                        background-color: #997777;
+                        /**/
+                        border: 1px dashed red; /**/
                         height: 50vh;
+                        margin: 0;
+                        padding: 30px;
                     }
 
                     .about {

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import * as React from 'react';
-import { PAGE_TITLE } from '../config';
+import { PAGE_TITLE } from '../config/config';
 
 interface ILayoutProps {
     title?: string;
@@ -16,6 +16,7 @@ export const Layout: React.FunctionComponent<ILayoutProps> = ({ children, title 
                 rel="shortcut icon"
                 href="https://1.gravatar.com/avatar/3d98c15957c5f5dd227e53dbc7cbb60d?s=64&r=pg&d=mm"
             />
+            {/*
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed" />
             <link
                 rel="stylesheet"
@@ -27,6 +28,7 @@ export const Layout: React.FunctionComponent<ILayoutProps> = ({ children, title 
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.3/css/simple-line-icons.css"
             />
+            */}
             <script
                 dangerouslySetInnerHTML={{
                     __html: `
@@ -79,7 +81,12 @@ export const Layout: React.FunctionComponent<ILayoutProps> = ({ children, title 
         <style jsx global>
             {`
                 body {
-                    font-family: oswald;
+                    @import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap');
+
+                    /**/
+                    font-family: 'Oswald', sans-serif; /**/
+                    /*/
+                    font-family: 'Open Sans', sans-serif; /**/
                     padding: 0;
                     margin: 0;
                 }

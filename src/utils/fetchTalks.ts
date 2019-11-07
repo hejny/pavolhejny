@@ -3,7 +3,7 @@ import { IConfigSource } from 'configchecker';
 import { decapitalize, emptyKeysAsUndefined, isNotEmpty } from 'configchecker/lib/utils/object';
 import fetch from 'isomorphic-unfetch';
 import papaparse from 'papaparse';
-import { TALKS_CSV_URL } from '../config';
+import { TALKS_CSV_URL } from '../config/config';
 import { Talk } from '../model/Talk';
 
 export async function fetchTalks(): Promise<Talk[]> {
