@@ -33,7 +33,7 @@
     "configchecker": "^0.4.1",
     "gh-pages": "^2.1.1",
     "isomorphic-unfetch": "^3.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "next": "8.1.1-canary.43",
     "onchange": "^3.3.0",
     "open-cli": "^5.0.0",
