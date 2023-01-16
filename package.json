@@ -37,7 +37,7 @@
     "next": "8.1.1-canary.43",
     "onchange": "^3.3.0",
     "open-cli": "^5.0.0",
-    "papaparse": "^5.1.0",
+    "papaparse": "^5.2.0",
     "prettier": "github:prettier/prettier",
     "react": "16.8.6",
     "react-dom": "16.8.6",
