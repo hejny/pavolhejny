@@ -1,46 +1,46 @@
 {
-  "name": "talks",
-  "version": "0.1.3",
-  "description": "My (me@pavolhejny.com) personal page.",
-  "homepage": "https://www.pavolhejny.com/",
-  "author": "Pavol Hejný",
-  "license": "ISC",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "start": "npm run clear && open-cli http://localhost:4111/ && next ./src -p 4111",
-    "prettier": "prettier --config .prettierrc --write \"./src/**/*.{ts,tsx,css,json,js}\"",
-    "prettier-watch": "onchange \"./src/**/*.(ts|tsx|css|json|js)\" -- prettier --config .prettierrc --write \"{{changed}}\"",
-    "prettier-commit": "git diff --exit-code && npm run prettier && git add src && git commit --allow-empty -m \"Prettier\"",
-    "clear": "",
-    "old-TODO-remove-and-purge-clear": "rm -r -f ./src/.next",
-    "build": "npm run clear && next build ./src",
-    "export": " next export -o ./dist/export ./src",
-    "github-deploy": "gh-pages -d dist/export",
-    "preversion": "npm run prettier-commit && npm run build && npm run export",
-    "postversion": "git push && git push --tags && npm run deploy"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com:hejny/talks.git"
-  },
-  "dependencies": {
-    "@types/node": "^11.15.0",
-    "@types/papaparse": "^4.5.11",
-    "@types/react": "^16.9.11",
-    "@types/react-dom": "^16.9.3",
-    "configchecker": "^0.4.1",
-    "gh-pages": "^2.1.1",
-    "isomorphic-unfetch": "^3.0.0",
-    "moment": "^2.24.0",
-    "next": "8.1.1-canary.43",
-    "onchange": "^3.3.0",
-    "open-cli": "^5.0.0",
-    "papaparse": "^5.1.0",
-    "prettier": "github:prettier/prettier",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "typescript": "^3.6.4"
-  }
+    "name": "talks",
+    "version": "0.1.3",
+    "description": "My (me@pavolhejny.com) personal page.",
+    "homepage": "https://www.pavolhejny.com/",
+    "author": "Pavol Hejný",
+    "license": "SEE LICENSE IN LICENSE",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "start": "npm run clear && open-cli http://localhost:4111/ && next ./src -p 4111",
+        "prettier": "prettier --config .prettierrc --write \"./src/**/*.{ts,tsx,css,json,js}\"",
+        "prettier-watch": "onchange \"./src/**/*.(ts|tsx|css|json|js)\" -- prettier --config .prettierrc --write \"{{changed}}\"",
+        "prettier-commit": "git diff --exit-code && npm run prettier && git add src && git commit --allow-empty -m \"Prettier\"",
+        "clear": "",
+        "old-TODO-remove-and-purge-clear": "rm -r -f ./src/.next",
+        "build": "npm run clear && next build ./src",
+        "export": " next export -o ./dist/export ./src",
+        "github-deploy": "gh-pages -d dist/export",
+        "preversion": "npm run prettier-commit && npm run build && npm run export",
+        "postversion": "git push && git push --tags && npm run deploy"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com:hejny/talks.git"
+    },
+    "dependencies": {
+        "@types/node": "^11.15.0",
+        "@types/papaparse": "^4.5.11",
+        "@types/react": "^16.9.11",
+        "@types/react-dom": "^16.9.3",
+        "configchecker": "^0.4.1",
+        "gh-pages": "^2.1.1",
+        "isomorphic-unfetch": "^3.0.0",
+        "moment": "^2.24.0",
+        "next": "8.1.1-canary.43",
+        "onchange": "^3.3.0",
+        "open-cli": "^5.0.0",
+        "papaparse": "^5.1.0",
+        "prettier": "github:prettier/prettier",
+        "react": "16.8.6",
+        "react-dom": "16.8.6",
+        "typescript": "^3.6.4"
+    }
 }
