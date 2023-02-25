@@ -1,5 +1,3 @@
-import { NextPageContext } from 'next';
-import * as React from 'react';
 import { Layout } from '../components/Layout';
 //import '../style/index.css';
 

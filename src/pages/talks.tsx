@@ -3,8 +3,8 @@ import * as React from 'react';
 import { Layout } from '../components/Layout';
 import { TalksComponent } from '../components/TalksComponent';
 import { Talk } from '../model/Talk';
-import { fetchTalks } from '../utils/fetchTalks';
 import { compareTalksbyDate } from '../utils/compareDates';
+import { fetchTalks } from '../utils/fetchTalks';
 
 interface TalksPageProps {
     error?: string;

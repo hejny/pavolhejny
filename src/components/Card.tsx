@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { ICardDesign } from '../config/interfaces';
-import { CARD_DESIGNS } from '../config/config';
 import { cardDesignToStyle } from '../config/cardDesignToStyle';
+import { ICardDesign } from '../config/interfaces';
 
 interface ICardProps {
     uri: string;

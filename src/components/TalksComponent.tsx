@@ -1,6 +1,5 @@
-import * as React from 'react';
-import { Talk } from '../model/Talk';
 import moment from 'moment';
+import { Talk } from '../model/Talk';
 
 type ITalksComponentProps = {
     talks: Talk[];
