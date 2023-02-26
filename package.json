@@ -26,21 +26,21 @@
         "url": "https://github.com/hejny/pavolhejny"
     },
     "dependencies": {
-        "@types/node": "^11.15.0",
-        "@types/papaparse": "^4.5.11",
-        "@types/react": "^16.9.11",
-        "@types/react-dom": "^16.9.3",
-        "configchecker": "^0.4.1",
-        "gh-pages": "^2.1.1",
-        "isomorphic-unfetch": "^3.0.0",
-        "moment": "^2.24.0",
+        "@types/node": "11.15.0",
+        "@types/papaparse": "4.5.11",
+        "@types/react": "16.9.11",
+        "@types/react-dom": "16.9.3",
+        "configchecker": "0.4.1",
+        "gh-pages": "2.1.1",
+        "isomorphic-unfetch": "3.0.0",
+        "moment": "2.24.0",
         "next": "8.1.1-canary.43",
-        "onchange": "^3.3.0",
-        "open-cli": "^5.0.0",
-        "papaparse": "^5.1.0",
-        "prettier": "^2.8.4",
+        "onchange": "3.3.0",
+        "open-cli": "5.0.0",
+        "papaparse": "5.1.0",
+        "prettier": "2.8.4",
         "react": "16.8.6",
         "react-dom": "16.8.6",
-        "typescript": "^3.6.4"
+        "typescript": "3.6.4"
     }
 }
