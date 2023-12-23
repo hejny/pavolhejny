@@ -1,15 +1,11 @@
-import { Color } from "./config";
-
+import { Color } from './config';
 
 export interface ICardDesign {
     textColor: Color;
     backgroundColor: Color;
     backgroundImage?: string;
-   
 }
 
-
-
-export  interface ICardDesigns{
+export interface ICardDesigns {
     [name: string]: ICardDesign;
-} 
+}

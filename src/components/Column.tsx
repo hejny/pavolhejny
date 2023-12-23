@@ -7,7 +7,7 @@ interface IColumnProps {
 
 export function Column(props: IColumnProps) {
     let { children, columns } = props;
-    columns = columns||2;
+    columns = columns || 2;
     return (
         <>
             <div className="column">{children}</div>

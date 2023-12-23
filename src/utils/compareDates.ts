@@ -8,7 +8,7 @@ export function compareTalksbyDate(talk1: Talk, talk2: Talk | null = null): Comp
 
 export function compareDates(date1: Date, date2 = new Date()): CompareResult {
     try {
-        const delta = ((new Date(date2) as any) as number) - ((new Date(date1) as any) as number);
+        const delta = (new Date(date2) as any as number) - (new Date(date1) as any as number);
 
         if (delta > 0) {
             return 1;
