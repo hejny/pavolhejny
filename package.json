@@ -42,5 +42,15 @@
         "react": "16.8.6",
         "react-dom": "16.8.6",
         "typescript": "3.6.4"
-    }
+    },
+    "funding": [
+        {
+            "type": "individual",
+            "url": "https://buymeacoffee.com/hejny"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/hejny/pavolhejny/blob/main/README.md#%EF%B8%8F-contributing"
+        }
+    ]
 }
