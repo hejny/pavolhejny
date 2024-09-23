@@ -4,7 +4,7 @@
     "description": "This is personal website of Pavol Hejný.",
     "homepage": "https://www.pavolhejny.com/",
     "author": "Pavol Hejný",
-    "license": "SEE LICENSE IN LICENSE",
+    "license": "Apache-2.0",
     "directories": {
         "lib": "lib"
     },
