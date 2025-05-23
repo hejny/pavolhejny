@@ -6,8 +6,8 @@
 
 [![Known Vulnerabilities](https://snyk.io/test/github/hejny/pavolhejny/badge.svg)](https://snyk.io/test/github/hejny/pavolhejny)
 [![Issues](https://img.shields.io/github/issues/hejny/pavolhejny.svg?style=flat)](https://github.com/hejny/pavolhejny/issues)
-[![Socket](https://socket.dev/api/badge/npm/package/talks)](https://socket.dev/npm/package/talks)
 <!--[![License of Pavol Hejný](https://img.shields.io/github/license/hejny/pavolhejny.svg?style=flat)](https://github.com/hejny/pavolhejny/blob/main/LICENSE)-->
+<!--[![Socket](https://socket.dev/api/badge/npm/package/talks)](https://socket.dev/npm/package/talks)-->
 
 <!--/Badges-->
 
